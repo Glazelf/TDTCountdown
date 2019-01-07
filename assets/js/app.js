@@ -26,4 +26,5 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = `<span style='float:left;position:relative;margin-left:36%;margin-top:-8%;color:white;font-size:96px'>TDT Time!</span>`;
   }
 }, 1000);
-document.getElementById("credits").innerHTML = `<span style='float:left;position:relative;margin-top:36%;margin-left:93%;color:white;font-size:16px'>Made by <a href="https://twitter.com/Glazelfy" target="_blank">Glaze</a></span>`;
+document.getElementById("credits").innerHTML = `<span style='float:left;position:relative;margin-top:35%;margin-left:93%;color:white;font-size:16px'>Made by <a href="https://twitter.com/Glazelfy" target="_blank">Glaze</a></span>`;
+document.getElementById("creditsteam").innerHTML = `<span style='float:left;position:relative;margin-top:0%;margin-left:68%;color:white;font-size:16px'>"0-2 Free Soda And Hanging With The Homies All Weekend"- Crew- Team</span>`;
