@@ -3,4 +3,4 @@ Some older, awful coding to make a quick countdown for [ThermoDynamic Throwdown]
 
 
 Should look somewhat like this: 
-![ExampleScreenshot](https://i.imgur.com/XO0Jnu8.jpg)
+![ExampleScreenshot](https://i.imgur.com/asv664U.jpg)
