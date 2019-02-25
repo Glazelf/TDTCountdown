@@ -25,7 +25,7 @@ var x = setInterval(function () {
   // Writing text depending on the time remaining
   if (distance > 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = `<span style='font-family:helvetica;float:left;position:relative;margin-left:10%;margin-top:-8%;color:white;font-size:96px'>It's ${days}d ${hours}h ${minutes}m ${seconds}s to TDT</span>`;
+    document.getElementById("demo").innerHTML = `<span style='font-family:helvetica;float:left;position:relative;margin-left:12%;margin-top:-8%;color:white;font-size:96px'>It's ${days}d ${hours}h ${minutes}m ${seconds}s to TDT</span>`;
   } else if (distance <= 0 && distance > -172800000) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = `<span style='font-family:helvetica;float:left;position:relative;margin-left:36%;margin-top:-8%;color:white;font-size:96px'>TDT Time!</span>`;
