@@ -2,7 +2,7 @@
 var countDownDate = new Date("Mar 9, 2019 12:00:00").getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function() {
+var x = setInterval(function () {
 
   // Get todays date and time
   var now = new Date().getTime();
@@ -16,14 +16,22 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = `<span style='font-family:helvetica;float:left;position:relative;margin-left:26%;margin-top:-8%;color:white;font-size:96px'>${days}d ${hours}h ${minutes}m ${seconds}s</span>`;
-  
+  //Counting negative days towards TDT
+  var daysSince = days - (days * 2);
+  var hoursSince = hours - (hours * 2);
+  var minutesSince = minutes - (minutes * 2);
+  var secondsSince = seconds - (seconds * 2);
 
-  // If the count down is finished, write some text 
-  if (distance < 0) {
+  // Writing text depending on the time remaining
+  if (distance > 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = `<span style='font-family:helvetica;float:left;position:relative;margin-left:10%;margin-top:-8%;color:white;font-size:96px'>It's ${days}d ${hours}h ${minutes}m ${seconds}s to TDT</span>`;
+  } else if (distance <= 0 && distance > -172800000) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = `<span style='font-family:helvetica;float:left;position:relative;margin-left:36%;margin-top:-8%;color:white;font-size:96px'>TDT Time!</span>`;
+  } else if (distance <= -172800000) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = `<span style='font-family:helvetica;float:left;position:relative;margin-left:10%;margin-top:-8%;color:white;font-size:75px'>It's been ${daysSince}d ${hoursSince}h ${minutesSince}m ${secondsSince}s since TDT!</span>`;
   }
 }, 1000);
 
